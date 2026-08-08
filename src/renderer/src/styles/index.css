@@ -1,0 +1,129 @@
+@import 'tailwindcss';
+
+:root,
+[data-theme='dark'] {
+  --bg: #0a0a0d;
+  --bg-elevated: #101014;
+  --surface: #131318;
+  --surface-2: #191920;
+  --surface-hover: #1e1e27;
+  --border: #232329;
+  --border-subtle: #1b1b21;
+  --text-primary: #f3f3f6;
+  --text-secondary: #a3a3ae;
+  --text-tertiary: #6c6c78;
+  --accent: #7c6cf6;
+  --accent-hover: #9285ff;
+  --accent-soft: rgba(124, 108, 246, 0.14);
+  --accent-text: #c9c1ff;
+  --success: #34d399;
+  --success-soft: rgba(52, 211, 153, 0.14);
+  --danger: #f8717a;
+  --danger-soft: rgba(248, 113, 122, 0.14);
+  --warning: #fbbf24;
+  --warning-soft: rgba(251, 191, 36, 0.14);
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.28);
+  --shadow-lift: 0 14px 40px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme='light'] {
+  --bg: #f4f4f7;
+  --bg-elevated: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f7f7fa;
+  --surface-hover: #eeeef3;
+  --border: #e3e3ea;
+  --border-subtle: #ececf1;
+  --text-primary: #17171c;
+  --text-secondary: #55555f;
+  --text-tertiary: #8a8a94;
+  --accent: #6c5ce8;
+  --accent-hover: #5c4bd9;
+  --accent-soft: rgba(108, 92, 232, 0.1);
+  --accent-text: #5138c9;
+  --success: #0f9d68;
+  --success-soft: rgba(15, 157, 104, 0.1);
+  --danger: #e0323f;
+  --danger-soft: rgba(224, 50, 63, 0.1);
+  --warning: #b5790a;
+  --warning-soft: rgba(181, 121, 10, 0.12);
+  --shadow-soft: 0 8px 24px rgba(20, 20, 30, 0.08);
+  --shadow-lift: 0 14px 40px rgba(20, 20, 30, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family:
+    'Inter',
+    -apple-system,
+    'Segoe UI',
+    system-ui,
+    sans-serif;
+  font-size: 13.5px;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  user-select: none;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+  color: inherit;
+}
+
+input,
+textarea {
+  user-select: text;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
+.drag-region {
+  -webkit-app-region: drag;
+}
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+
+.mono {
+  font-family: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+}
+
+@keyframes ms-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+.animate-ms-pulse {
+  animation: ms-pulse 1.6s ease-in-out infinite;
+}
